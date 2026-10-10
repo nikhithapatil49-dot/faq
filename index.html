@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FAQ</title>
+<style>
+body{
+ background-color: lightgray;
+ font-family: Arial;
+}
+h1{
+ text-align: center;
+}
+.main{
+ width: 90%;
+ margin: auto;
+ background: white;
+ padding: 10px;
+}
+.question{
+ width: 100%;
+ padding: 10px;
+ background: white;
+ border: 1px solid black;
+ text-align: left;
+ margin-top: 5px;
+ cursor: pointer;
+}
+.answer{
+ display: none;
+ background: #f0f0f0;
+ padding: 10px;
+ border: 1px solid gray;
+}
+.show{
+ display: block;
+}
+.active{
+ background-color: lightblue;
+}
+</style>
+</head>
+<body>
+
+<h1>FAQ Questions</h1>
+
+<div class="main">
+
+<button class="question" onclick="myFunction(1)">1. What is HTML?</button>
+<div id="a1" class="answer">HTML is used to make structure of website.</div>
+
+<button class="question" onclick="myFunction(2)">2. What is CSS?</button>
+<div id="a2" class="answer">CSS is used for styling the website.</div>
+
+<button class="question" onclick="myFunction(3)">3. What is JavaScript?</button>
+<div id="a3" class="answer">JavaScript is used to make website interactive.</div>
+
+<button class="question" onclick="myFunction(4)">4. What is classList.toggle?</button>
+<div id="a4" class="answer">It is used to add or remove class.</div>
+
+<button class="question" onclick="myFunction(5)">5. What is DOM?</button>
+<div id="a5" class="answer">DOM means Document Object Model.</div>
+
+<button class="question" onclick="myFunction(6)">6. What is responsive design?</button>
+<div id="a6" class="answer">It means website works in mobile and laptop both.</div>
+
+<button class="question" onclick="myFunction(7)">7. Why button is used?</button>
+<div id="a7" class="answer">Because button is easy to click and accessible.</div>
+
+<button class="question" onclick="myFunction(8)">8. What is event handling?</button>
+<div id="a8" class="answer">When user clicks, some function runs, that is event handling.</div>
+
+</div>
+
+<script>
+function myFunction(num){
+ var ans = document.getElementById("a" + num);
+ ans.classList.toggle("show");
+
+ var btn = ans.previousElementSibling;
+ btn.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
